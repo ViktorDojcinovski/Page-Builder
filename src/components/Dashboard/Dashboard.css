@@ -1,0 +1,19 @@
+.Dashboard {
+    background-color: #222;
+    width: 200px;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 100;
+}
+
+.NavHeader {
+    margin-top: 40px;
+    color: white;
+    text-align: center;
+}
+
+.Avatar {
+    width: 100%;
+}
