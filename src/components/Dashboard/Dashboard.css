@@ -1,7 +1,8 @@
 .Dashboard {
     background-color: #222;
-    width: 200px;
+    width: 195px;
     height: 100vh;
+    float: left;
     box-sizing: border-box;
     padding-top: 10px;
     padding-bottom: 10px;

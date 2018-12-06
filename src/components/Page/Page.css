@@ -1,0 +1,56 @@
+.Page {
+    position: relative;
+    height: 80vh;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px dashed #eee;
+    border-radius: 4px;
+}
+
+.Placeholder {
+    display: block;
+    font-size: 36px;
+    font-weight: bold;
+    color:#ccc;
+    text-align: center;
+    margin-top: 35vh;
+
+}
+
+.Page header {
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    height: 100px;
+    border: 1px dashed #eee;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 24px;
+    color: #aaa;
+}
+
+.Page footer {
+    position: absolute;
+    bottom: 5px;
+    width: calc(100% - 20px);
+    height: 100px;
+    border: 1px dashed #eee;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 18px;
+    color: #aaa;
+}
+
+.Page main {
+    position: relative;
+    margin-top: 20px;
+    margin-right: 5%;
+    width: 45%;
+    height: fit-content;
+    border: 1px dashed #eee;
+    border-radius: 2px;
+    text-align: left;
+    float: right;
+    font-size: 12px;
+    color: #aaa;
+}

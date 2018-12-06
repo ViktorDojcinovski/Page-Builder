@@ -10,9 +10,9 @@ class Layout extends Component {
         return(
             <AuxComp>
                 <Dashboard />
-                <main className={classes.Main}>
+                <div className={classes.Main}>
                     {this.props.children}
-                </main>
+                </div>
             </AuxComp>
         )
     }
