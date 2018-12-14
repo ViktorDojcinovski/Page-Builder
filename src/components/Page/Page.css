@@ -1,6 +1,6 @@
 .Page {
     position: relative;
-    height: 72vh;
+    height: calc(72vh - 60px);
     padding: 10px;
     box-sizing: border-box;
     border: 1px dashed #eee;
@@ -13,7 +13,7 @@
     font-weight: bold;
     color:#ccc;
     text-align: center;
-    margin-top: 35vh;
+    margin-top: calc(35vh - 60px);
 
 }
 
