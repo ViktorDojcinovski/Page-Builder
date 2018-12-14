@@ -1,29 +1,36 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import classes from './Page.css';
 import PageComponent from './PageComponent/PageComponent';
+import AuxComp from '../../hoc/AuxComp/AuxComp';
 
-const page = (props) => {
+class Page extends Component {
 
-    let commutedElements = Object.keys(props.html_elements)
-        .map(element => {
-            return [...Array(props.html_elements[element])].map((__, i) => {
-                return <PageComponent key={element + i} type={element} removeElement={(e) => props.elementRemoved(e)}/>
-            });
-        })
-        .reduce((arr, el) => { 
-            return arr.concat(el) },
-        []);
+    createMarkup() {
+        return {__html: this.props.page_html}; 
+    }
 
-    if(commutedElements.length === 0) commutedElements = <span className={classes.Placeholder}>Start adding elements here!</span>;
+    render() {
+        let commutedElements = Object.keys(this.props.html_elements)
+            .map(element => {
+                return [...Array(this.props.html_elements[element]['count'])].map((__, i) => {
+                    return <PageComponent key={element + i}  id={this.props.html_elements[element]['ids'][i]} type={element} removeElement={(e) => this.props.elementRemoved(e)}/>
+                });
+            })
+            .reduce((arr, el) => { 
+                return arr.concat(el) },
+            []); 
 
-    return (
-        <div 
-            className={classes.Page}>
-                {commutedElements}
-        </div>
-    )
+        if(commutedElements.length === 0) commutedElements = <span className={classes.Placeholder}>Start adding elements here!</span>;
 
+        return (
+            <AuxComp>
+                { this.props.edit_mode  ? 
+                    <div className={classes.Page} dangerouslySetInnerHTML={this.createMarkup()} /> : 
+                    <div className={classes.Page}> {commutedElements} </div> }
+            </AuxComp>
+        )
+    }
 }
 
-export default page;
+export default Page;

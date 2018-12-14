@@ -1,0 +1,35 @@
+.ControlIcon {
+    float: left;
+    background-color: #222;
+    color: white;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 8px;
+    height: 6vh;
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: all .2s;
+}
+
+.ControlIcon:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.Edit, .Trash {
+    float: right;
+    background-color: transparent;
+    color: #ccc;
+    border-right: transparent;
+    border-left: transparent;
+    border-radius: 8px;
+    width: 50px;
+    height: 3vh;
+}
+
+.Edit:hover, .Trash:hover {
+    color: #888;
+}

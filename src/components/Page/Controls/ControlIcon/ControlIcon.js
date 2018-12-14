@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
 
-import classes from './BuildControl.css';
+import classes from './ControlIcon.css';
+import FAIcon from '../../../UI/FontAwesome/FAIcon';
 
-class BuildControl extends Component {
+class ControlIcon extends Component {
     
     onDragStart = (event) => {
-        console.log('dragging started');
         event.dataTransfer.setData("type", this.props.type)
     }
 
     render() {
 
-        const el_classes = [classes.BuildControl, classes[this.props.label]];
+        const el_classes = [classes.ControlIcon, classes[this.props.label]];
 
-        return(
+        return (
             <div 
                 className={el_classes.join(' ')} 
                 draggable
+                onClick={this.props.clicked}
                 onDragStart={(e) => this.onDragStart(e)}>
-                    {this.props.icon}
+                    <FAIcon icon={this.props.icon} />
                     {this.props.label}
             </div>
         )
     }
 }
 
-export default BuildControl;
+export default ControlIcon;

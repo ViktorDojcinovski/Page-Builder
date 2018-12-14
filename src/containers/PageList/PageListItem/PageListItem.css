@@ -1,0 +1,38 @@
+.PageListItem {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 5px 10px;
+    transition: all .1s;
+}
+
+.PageListItem:hover {
+    width: 100%;
+    height: 56px;
+    box-sizing: border-box;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.PageListItem:hover .ListItemName {
+    color:#aaa;
+}
+
+.PageListItem:hover .PageListControls {
+    display: block;
+}
+
+.ListItemName {
+    display: inline-block;
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    color:#ccc;
+}
+
+.PageListControls {
+    display: none;
+}

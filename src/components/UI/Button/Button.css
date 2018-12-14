@@ -1,0 +1,40 @@
+.Button {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    margin: 10px;
+    font-weight: bold;
+    float: right;
+    transition: all .2s;
+}
+
+.Button:hover {
+    transform: scale(1.1);
+}
+
+.Button:disabled,
+.Button[disabled] {
+    opacity: 0.4;
+    transform: scale(1);
+}
+
+.Button:first-of-type {
+    margin-left: 0;
+}
+
+.Success {
+    background-color: rgb(89, 150, 5);
+}
+
+.Warning {
+    background-color: #c7cf58;
+}
+
+.Danger {
+    background-color: #ff1717;
+}

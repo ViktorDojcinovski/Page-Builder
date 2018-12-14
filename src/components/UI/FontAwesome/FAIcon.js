@@ -1,10 +1,10 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-const headerIcon = () => (
+const FAIcon = (props) => (
   <div>
-    <FontAwesomeIcon icon="heading" />
+    <FontAwesomeIcon icon={props.icon} />
   </div>
 )
 
-export default headerIcon;
+export default FAIcon;
