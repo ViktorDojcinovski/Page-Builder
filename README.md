@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-##Connect with the API
+## Connect with the API
 
 After installing the project, go to the config folder and add you environment variables into env.example.js file and rename the file to env.js:
 
