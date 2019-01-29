@@ -67,8 +67,7 @@ function getClientEnvironment(publicUrl) {
       (env, key) => {
         env[key] = process.env[key];
         return env;
-      },
-      {
+      }, {
         // Useful for determining whether we’re running in production mode.
         // Most importantly, it switches React into the correct mode.
         NODE_ENV: process.env.NODE_ENV || 'development',
@@ -77,6 +76,14 @@ function getClientEnvironment(publicUrl) {
         // This should only be used as an escape hatch. Normally you would put
         // images into the `src` and `import` them in code to get their paths.
         PUBLIC_URL: publicUrl,
+        // Constants for making OAuth2 client calls to 'page-builder-api'
+        ISSUER: 'https://{ your-okta-account }.oktapreview.com/oauth2/default',
+        CLIENT_ID: '{ your-client-id }',
+        CLIENT_SECRET: '{ your-client-secret }',
+        SCOPE: '{ your-scope }',
+
+        // Constant for using the axios client base URL
+        BASE_URL: 'http://localhost:8001',
       }
     );
   // Stringify all values so we can feed into Webpack DefinePlugin

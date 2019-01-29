@@ -1,5 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+##Connect with the API
+
+After installing the project, go to the config folder and add you environment variables into env.example.js file and rename the file to env.js:
+
+ISSUER: 'https://{ your-okta-account }.oktapreview.com/oauth2/default',
+CLIENT_ID: '{ your-client-id }',
+CLIENT_SECRET: '{ your-client-secret }',
+SCOPE: '{ your-scope }',
+
+// Constant for using the axios client base URL
+BASE_URL: '{ localhost-address-to-your-local-API-service }',
+
 ## Available Scripts
 
 In the project directory, you can run:

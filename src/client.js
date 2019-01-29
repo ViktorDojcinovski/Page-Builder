@@ -1,9 +1,6 @@
 import request from 'request-promise';
 import btoa from 'btoa';
 
-import { ISSUER, CLIENT_ID, CLIENT_SECRET, SCOPE } from './config';
-
-
 /**
  *  Use this function obtaining token for
  *  the 'page-builder-api' OAuth2 client.
@@ -18,10 +15,10 @@ import { ISSUER, CLIENT_ID, CLIENT_SECRET, SCOPE } from './config';
  *  @return promise 
  */
 const sendAPIRequest = () => {
-  const token = btoa(`${CLIENT_ID}:${CLIENT_SECRET}`)
+  const token = btoa(`${process.env.CLIENT_ID}:${process.env.CLIENT_SECRET}`)
   try {
     const auth = request({
-      uri: `https://cors-anywhere.herokuapp.com/${ISSUER}/v1/token`,
+      uri: `https://cors-anywhere.herokuapp.com/${process.env.ISSUER}/v1/token`,
       json: true,
       method: 'POST',
       headers: {
@@ -29,7 +26,7 @@ const sendAPIRequest = () => {
       },
       form: {
         grant_type: 'client_credentials',
-        scope: SCOPE
+        scope: process.env.SCOPE
       }
     })
 

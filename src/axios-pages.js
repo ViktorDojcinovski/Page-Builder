@@ -1,7 +1,5 @@
 import axios from 'axios';
 
-import { BASE_URL } from './config.js';
-
 /**
  * Provide basic configuration for the
  * axios client for making ajax calls
@@ -15,7 +13,7 @@ import { BASE_URL } from './config.js';
  * @return void
  */
 const instance = axios.create({
-                    baseURL: BASE_URL,
-                });
+  baseURL: process.env.BASE_URL,
+});
 
 export default instance;
